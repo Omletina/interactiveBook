@@ -11,6 +11,7 @@
 
 <script>
 import MyHeader from '@/components/MyHeader'
+// import booksRef from '@/firebase'
 
 export default {
   name: 'app',

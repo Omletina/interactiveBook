@@ -17,7 +17,7 @@ export default {
   methods: {
     setModel: function (idBook, idChapter, idStep) {
       // сохраняем в модель id книги
-      this.$store.dispatch('setModel', {'book': idBook, 'chapter': idChapter, 'step': idStep})
+      this.$store.dispatch('SetModelLocal', {'book': idBook, 'chapter': idChapter, 'step': idStep})
     },
     start: function (book) {
       if (!book) return

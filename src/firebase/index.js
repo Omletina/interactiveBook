@@ -4,7 +4,7 @@ import firebase from 'firebase'
 // import store from './store'
 // import * as firebase from 'firebase'
 
-const firebaseApp = firebase.initializeApp({
+firebase.initializeApp({
   apiKey: 'AIzaSyAxnhsCNaFB9OkwxPNTgjqTpNVumy_4Wyo',
   authDomain: 'book-9601a.firebaseapp.com',
   databaseURL: 'https://book-9601a.firebaseio.com',
@@ -12,29 +12,10 @@ const firebaseApp = firebase.initializeApp({
   storageBucket: 'book-9601a.appspot.com',
   messagingSenderId: '527252966937'
 })
-const db = firebaseApp.database()
+// var db = appFirebase.database()
+// var booksRef = db.ref()
+// export default booksRef
 
-// if (__DEV__) {
-//   window.firebase = firebase
-// }
-
-// export const ui = new firebaseui.auth.AuthUI(firebase.auth())
-const rootRef = db.ref().child('id')
-// db.ref('book-9601a/').once('value', function (snap) {
-//   debugger
-//   console.log(JSON.stringify(snap.val()))
-// })
-console.log(rootRef)
-debugger
-
-/**
- * Sync store.state.user with firebase.auth().currentUser
- *
- * This callback is called when firebase.auth() detects user changes,
- * so just update the vuex store with the new user object.
- */
-// firebase.auth().onAuthStateChanged(user => {
-//   store.commit('UPDATE_USER', user)
-// })
-
-export default firebase
+export default {
+  database: firebase.database()
+}

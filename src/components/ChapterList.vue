@@ -46,7 +46,7 @@ export default {
     },
     addNew () {
       debugger
-      // this.$store.dispatch('setModel', { key: 'name', value: 'book-1' })
+      // this.$store.dispatch('SetModelLocal', { key: 'name', value: 'book-1' })
     }
   }
 }

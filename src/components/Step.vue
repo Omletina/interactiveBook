@@ -31,7 +31,7 @@ export default {
   methods: {
     stepNext: function (question) {
       // Переход на следующий шаг, передаем id вопроса дальше
-      this.$store.dispatch('setModel', {'book': this.step.book, 'chapter': this.step.chapter, 'step': question.go})
+      this.$store.dispatch('SetModelLocal', {'book': this.step.book, 'chapter': this.step.chapter, 'step': question.go})
     }
   }
 }

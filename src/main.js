@@ -5,20 +5,18 @@ import VueResource from 'vue-resource'
 import App from './App'
 import router from './router'
 import store from './store'
-// import Vuefire from 'vuefire'
-import firebase from './firebase'
+import vuefire from 'vuefire'
 
 Vue.config.productionTip = false
 Vue.use(VueResource)
-// Vue.use(Vuefire)
+Vue.use(vuefire)
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
-  // Vuefire,
-  firebase,
+  vuefire,
   template: '<App/>',
   components: { App }
 })
